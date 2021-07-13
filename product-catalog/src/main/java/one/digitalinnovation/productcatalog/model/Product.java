@@ -10,7 +10,6 @@ import one.digitalinnovation.productcatalog.util.Index;
 
 
 @Document(indexName = Index.PRODUCT_INDEX, createIndex = false)
-@Setting(settingPath = "static/es-settings.json")
 public class Product {
 
     @Id
