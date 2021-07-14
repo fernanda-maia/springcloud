@@ -17,12 +17,12 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @RequestMapping(method = RequestMethod.POST)
-    Product createProduct(@RequestBody Product product) {
+    Product createProduct(@RequestBody final Product product) {
         return productRepository.save(product);
     }
 
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    Optional<Product> findById(@PathVariable Long id) {
+    Optional<Product> findById(@PathVariable final Long id) {
         return productRepository.findById(id);
     }
 }

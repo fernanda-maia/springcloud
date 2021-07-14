@@ -6,4 +6,5 @@ spring:
     config:
       server:
         git:
-          uri: ${GIT_URL}
+          uri: /home/fernanda/Development/Bootcamp/config-files
+

@@ -18,7 +18,8 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+	implementation group: 'org.springframework.data', name: 'spring-data-elasticsearch', version: '4.2.2'
+	implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-high-level-client', version: '7.13.3'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation group: 'org.springframework.cloud', name: 'spring-cloud-config-client', version: '3.0.4'
 	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-bootstrap', version: '3.0.3'

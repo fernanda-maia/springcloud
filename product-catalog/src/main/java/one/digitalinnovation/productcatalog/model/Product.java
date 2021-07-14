@@ -9,17 +9,16 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import one.digitalinnovation.productcatalog.util.Index;
 
 
-@Document(indexName = Index.PRODUCT_INDEX, createIndex = false)
+@Document(indexName = Index.PRODUCT_INDEX)
 public class Product {
 
     @Id
-    @Field(type = FieldType.Long)
     private Long id;
 
-    @Field(type = FieldType.Text)
+    @Field(type = FieldType.Text, name = "name")
     private String name;
 
-    @Field(type = FieldType.Integer)
+    @Field(type = FieldType.Integer, name = "amount")
     private Integer amount;
 
     public Long getId() {

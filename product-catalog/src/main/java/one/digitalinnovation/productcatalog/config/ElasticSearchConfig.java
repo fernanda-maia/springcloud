@@ -13,14 +13,14 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 
 
 @Configuration
-@ComponentScan(basePackages = "one.digitalinnovation.productcatalog")
+@ComponentScan(basePackages = {"one.digitalinnovation.productcatalog"})
 @EnableElasticsearchRepositories(basePackages = "one.digitalinnovation.productcatalog.repository")
 public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
 
     @Bean
     @Override
     public RestHighLevelClient elasticsearchClient() {
-        ClientConfiguration clientConfiguration = ClientConfiguration.builder()
+        final ClientConfiguration clientConfiguration = ClientConfiguration.builder()
                 .connectedTo("localhost:9200")
                 .build();
 
