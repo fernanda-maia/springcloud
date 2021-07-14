@@ -8,8 +8,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import one.digitalinnovation.productcatalog.util.Index;
 
-
-@Document(indexName = Index.PRODUCT_INDEX)
+@Document(indexName = Index.PRODUCT_INDEX, createIndex = false)
 public class Product {
 
     @Id
